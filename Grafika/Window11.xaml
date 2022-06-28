@@ -1,0 +1,13 @@
+﻿<Window x:Class="Organizator.Window11"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Organizator"
+        mc:Ignorable="d"
+        Title="Window11" Height="477" Width="719">
+    <Grid Margin="0,0,10,6">
+        <Image Margin="0,0,0,0" Source="/Organizator;component/Slike/Brizan.jpeg"/>
+
+    </Grid>
+</Window>

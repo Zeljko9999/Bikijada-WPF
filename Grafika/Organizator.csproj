@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Lipotica.jpg" />
+    <None Remove="Slike\Brizan.jpeg" />
+    <None Remove="Slike\Medo.jpg" />
+    <None Remove="Slike\Vakciner.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Organizacija\Organizacija.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Slike\Brizan.jpeg" />
+    <Resource Include="Slike\Lipotica.jpg" />
+    <Resource Include="Slike\Medo.jpg" />
+    <Resource Include="Slike\Vakciner.jpeg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,63 @@
+﻿<Window x:Class="Organizator.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Organizator"
+        mc:Ignorable="d"
+        Title="Window2" Height="885" Width="1245">
+    <Grid Margin="10,250,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="202*"/>
+            <ColumnDefinition Width="219*"/>
+            <ColumnDefinition Width="814*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="upl" HorizontalAlignment="Left" Height="30" Margin="187,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" TextChanged="upl_TextChanged" FontSize="16" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="bik" HorizontalAlignment="Left" Height="30" Margin="187,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" TextChanged="bik_TextChanged" FontSize="16" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="vl" HorizontalAlignment="Left" Height="30" Margin="187,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" TextChanged="vl_TextChanged" FontSize="16" Grid.ColumnSpan="2"/>
+        <Label Content="Iznos uplate (kn)" HorizontalAlignment="Left" Height="30" Margin="23,286,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Ime bika" HorizontalAlignment="Left" Height="30" Margin="23,339,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Ime vlasnika" HorizontalAlignment="Left" Height="30" Margin="23,399,0,0" VerticalAlignment="Top" Width="132"/>
+        <TextBox x:Name="klad" HorizontalAlignment="Left" Height="30" Margin="187,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" TextChanged="klad_TextChanged" FontSize="16" Grid.ColumnSpan="2"/>
+        <Label Content="Ime kladioničara" HorizontalAlignment="Left" Height="30" Margin="23,232,0,0" VerticalAlignment="Top" Width="132"/>
+        <Button x:Name="btnOkl1" Content="Spremi" HorizontalAlignment="Left" Height="44" Margin="199,450,0,0" VerticalAlignment="Top" Width="80" Click="btnOkl1_Click" FontSize="18" Grid.ColumnSpan="2"/>
+        <RichTextBox x:Name="output1" IsReadOnly="True" HorizontalAlignment="Left" Height="182" Margin="120,247,0,0" VerticalAlignment="Top" Width="433" TextChanged="output1_TextChanged" Grid.ColumnSpan="2" Grid.Column="1">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button x:Name="btnOkl2" Content="Dohvati sve" HorizontalAlignment="Left" Height="44" Margin="79,450,0,0" VerticalAlignment="Top" Width="97" FontSize="16" Click="btnOkl2_Click" RenderTransformOrigin="0.93,0.464" Grid.Column="2"/>
+        <Button x:Name="btnOkl3" Content="Dohvati" HorizontalAlignment="Left" Height="44" Margin="539,457,0,0" VerticalAlignment="Top" Width="80" FontSize="18" RenderTransformOrigin="1.606,0.558" Grid.Column="2" Click="btnOkl3_Click"/>
+        <TextBox x:Name="bikokl" HorizontalAlignment="Left" Height="50" Margin="372,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" FontSize="16" TextChanged="bikokl_TextChanged" Grid.Column="2"/>
+        <Label Content="        Ukupni iznos oklada na pojedinog bika&#xA;Unesi ime bika:                     Unesi vlasnika bika:" HorizontalAlignment="Left" Height="68" Margin="411,286,0,0" VerticalAlignment="Top" Width="336" FontSize="15" Grid.Column="2"/>
+        <TextBox x:Name="vlokl" HorizontalAlignment="Left" Height="50" Margin="579,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" FontSize="16" TextChanged="bikokl_TextChanged" Grid.Column="2"/>
+        <RichTextBox x:Name="output" Grid.ColumnSpan="3" IsReadOnly="True" HorizontalAlignment="Left" Height="202" Margin="32,-229,0,0" VerticalAlignment="Top" Width="940" RenderTransformOrigin="0.5,0.5" TextChanged="output_TextChanged">
+            <RichTextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RichTextBox.RenderTransform>
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Dohvati borbe" HorizontalAlignment="Left" Height="47" Margin="149,55,0,0" VerticalAlignment="Top" Width="142" Click="Button_Click" FontSize="18" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="pivac" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="615,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" FontSize="18" TextChanged="pivac_TextChanged"/>
+        <TextBox x:Name="pivacVl" Grid.Column="2" HorizontalAlignment="Left" Height="28" Margin="615,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" FontSize="18" TextChanged="pivacVl_TextChanged"/>
+        <Label Grid.Column="2" Content="Ime pivca" HorizontalAlignment="Left" Height="47" Margin="459,32,0,0" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <Label Grid.Column="2" Content="Vlasnik pivca" HorizontalAlignment="Left" Height="47" Margin="459,79,0,0" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <Button x:Name="pivac1" Grid.Column="2" Content="Dohvati" HorizontalAlignment="Left" Height="35" Margin="477,160,0,0" VerticalAlignment="Top" Width="84" FontSize="18" Click="pivac1_Click"/>
+        <Button x:Name="pivac2" Grid.Column="2" Content="Spremi" HorizontalAlignment="Left" Height="35" Margin="639,160,0,0" VerticalAlignment="Top" Width="84" FontSize="18" Click="pivac2_Click"/>
+        <TextBox x:Name="imageBik" Grid.Column="2" HorizontalAlignment="Right" Height="49" Margin="0,102,562,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" FontSize="18" TextChanged="imageBik_TextChanged"/>
+        <Button x:Name="Image" Grid.Column="2" Content="Dohvati Sliku" HorizontalAlignment="Left" Height="46" Margin="141,44,0,0" VerticalAlignment="Top" Width="112" Click="Image_Click" FontSize="18"/>
+        <Label Grid.Column="1" Content="Unesi ime bika&#xD;&#xA;za dohvat slike:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="49" Margin="178,102,0,0" VerticalAlignment="Top" Width="151" FontSize="16"/>
+
+    </Grid>
+</Window>
